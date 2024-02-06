@@ -18,7 +18,7 @@ async def first_bot(token, queue, bro_queue, dp):
 
 
         markup = types.ReplyKeyboardMarkup()
-        markup.add(types.KeyboardButton("Заполнить анкету", web_app=WebAppInfo(url='https://vadimirozz.github.io/kinda.html')))
+        markup.add(types.KeyboardButton("Заполнить анкету", web_app=WebAppInfo(url='https://kart.github.io/index.html')))
         photo = open('Kart.jpg', 'rb')
         await bot.send_photo(message.chat.id, photo, caption="Приветствуем в нашем клубе! Заполните анкету и мы Вам перезвоним!", reply_markup=markup)
 
@@ -35,7 +35,7 @@ async def first_bot(token, queue, bro_queue, dp):
 
 async def second_bot(token, queue, bro_queue, dp, first_bot_dp):
     bot = Bot(token)
-    first_bot_dp = Bot("6420992088:AAGLVPn996FipXIeNSfc2LQA3_yz3bo9kEU")
+    first_bot_dp = Bot("6885734025:AAETVok0edoh392wv48kzsB_aT6no-J6xWo")
 
     markup = InlineKeyboardMarkup(row_width=3)
     btn1 = InlineKeyboardButton('✅', callback_data='accept')
@@ -97,8 +97,8 @@ async def second_bot(token, queue, bro_queue, dp, first_bot_dp):
     asyncio.create_task(process_orders(queue, bot, markup))
 
 async def main():
-    token1 = "6420992088:AAGLVPn996FipXIeNSfc2LQA3_yz3bo9kEU"
-    token2 = "6425261423:AAEQ4CGmibeDRRnUfX2VZAF_BpwbWhT_vSY"
+    token1 = "6885734025:AAETVok0edoh392wv48kzsB_aT6no-J6xWo"
+    token2 = "5938819638:AAGpFBDX_6U80UHhnOM_tXOt1qu1cEg7TfA"
 
     queue = asyncio.Queue()
     bro_queue = asyncio.Queue()
